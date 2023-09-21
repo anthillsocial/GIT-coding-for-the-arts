@@ -1,2 +1,2 @@
-# coding-for-the-arts
+# Coding for the arts
 Code examples and resources
