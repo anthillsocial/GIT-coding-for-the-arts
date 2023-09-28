@@ -26,5 +26,6 @@ function draw(){
     // Light grey | 100x100 px rect | 50px  | 60px from top 
     fill(220);
     rect(300, 300, 400, 400);
+
 }
   
