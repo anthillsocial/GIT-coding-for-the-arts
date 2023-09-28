@@ -1,6 +1,6 @@
-# Offline p5.js template
+# Template: p5.js
 
-This is a basic p5.js template for a sketch. 
+This is a template for a basic p5.js sketch. 
 
 ### ← README.md
 
