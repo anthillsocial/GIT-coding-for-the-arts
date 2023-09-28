@@ -1,8 +1,8 @@
 //setup is run once when the webpage is first loaded
 function setup() {
-  createCanvas(500, 500); // 500x500 pixel canvas
-  background(255);        // White background 
-  noStroke();             // no outlines on shapes 
+  createCanvas(640, 480); // 500x500 pixel canvas
+  background(230);        // Light grey background 
+  //noStroke();             // no outlines on shapes 
 }
 
 // Runs on an infinite loop (around 60fps)
