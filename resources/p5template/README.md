@@ -1,6 +1,6 @@
 # Template: p5.js
 
-This is a template for a basic p5.js sketch. 
+This is a template for a basic p5.js sketch. This is an *offline* sketch which will work without will work without na internet connection. 
 
 ### ← README.md
 
