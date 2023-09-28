@@ -1,15 +1,10 @@
-MA1805 CODE TEMPLATE
-====================
+# Offline p5.js template
 
-This project is designed to act as a template for all the coding we will be doing in this module over the coming weeks. As you can see, there are multiple files in the project, but the main one that you will be working with is the file *sketch.js*. This is our Processing sketch file where we write our code. There is also *README.md* (this file!), and *index.html* (the webpage that loads and displays our Processing sketch).
-
-
-Your Project
-------------
+This is a basic p5.js template for a sketch. 
 
 ### ← README.md
 
-That's this file, where you can tell people what your project does and how you built it.
+The file where you can tell people what your project does, how you built it, and any other information. 
 
 ### ← index.html
 
@@ -17,8 +12,10 @@ You don't need to touch this, it's all set up for you to load the p5.js file and
 
 ### ← sketch.js
 
-This is where you should write your p5js code.
+This is where you should write your p5.js code.
 
--------------------
+### ← p5.js
 
-\ ゜o゜)ノ
+The p5.js framwork. 
+
+
