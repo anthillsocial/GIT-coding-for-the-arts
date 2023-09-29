@@ -11,41 +11,16 @@ function setup() {
 
   background(255);
 
-  //Base squares
-  //top left
-  fill(224, 103, 138);
-  rect(0, 0, 300, 300);
+}
 
-  //top right
-  fill(201, 75, 122);
-  rect(300, 0, 300, 300);
+function draw(){
 
-  //bottom left
-  fill(240, 130, 139);
-  rect(0, 300, 300, 300);
+  stroke(20, 200, 200);  // r, g, b 
+  strokeWeight(10);      // Width of stroke
+  fill(200, 20, 200);    // r, g, b
+  rect(350, 100, 100) 
 
-  //bottom right
-  fill(233, 163, 179);
-  rect(300, 300, 300, 300);
-
-  
-  //Inner squares
-  //Note the draw order here
-  //We are drawing these 'after' the base squares, and so they appear 'on top'
-  
-  //top left
-  fill(0, 160, 218);
-  rect(150, 150, 150, 150);
-
-  //top right
-  fill(0, 122, 173);
-  rect(300, 150, 150, 150);
-
-  //bottom left
+  stroke(33); 
   fill(63, 181, 209);
-  rect(150, 300, 150, 150);
-
-  //bottom right
-  fill(68, 193, 213);
-  rect(300, 300, 150, 150);
+  rect(100, 100, 200, 200, 20, 20, 5, 5)
 }
