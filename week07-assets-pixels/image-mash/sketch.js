@@ -30,6 +30,9 @@ function setup() {
 function draw() {
   clear();
   background(0);
+  image(img, 20, 20);
+}
+  /*
 
   let size = floor(map(mouseX, 0, width, 7, 40)); // maps mouseX value to element size
 
@@ -68,4 +71,4 @@ function keyPressed() {
   if (key === 's') {
     saveCanvas('pixilated', 'png');
   }
-}
+}*/
