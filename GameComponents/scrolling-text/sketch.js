@@ -4,6 +4,7 @@ let scrollSpeed = 0.8; // Speed of scroll
 let lineHeight = 15;   // Space between lines 
 
 function preload() {
+  // Loads the text file as an array of lines
   lines = loadStrings('sketch.js');
 }
 
@@ -35,6 +36,8 @@ function textScroll(){
 
 // Generate the starting Y positions
 function setupText(){
+  // Pint the lines array to the console
+  console.log(lines); 
   // Loop through each line of text
   for (let i = 0; i < lines.length; i++) {
     // Define a starting position for a line 
