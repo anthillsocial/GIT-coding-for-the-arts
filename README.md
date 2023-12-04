@@ -1,6 +1,6 @@
 # Coding for the arts
 Code examples and resources, based on 
-[instructions hosted on Notion](https://anthillsocial.notion.site/anthillsocial/Coding-for-the-arts-87d747bca56c41caa78496b32ff293fd</p>
+[instructions hosted on Notion](https://anthillsocial.notion.site/anthillsocial/Coding-for-the-arts-87d747bca56c41caa78496b32ff293fd) 
 
 ## Links 
 
