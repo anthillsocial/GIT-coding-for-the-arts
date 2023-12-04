@@ -5,7 +5,6 @@ function setup() {
   score = 0;
   isPlaying = false
   defaultTimer = 5
-  countdownTimer = null
   lastObsSpawn = null
   playerX = null
   playerY = null
@@ -32,6 +31,22 @@ function setup() {
   isDead = false
   highScores = []
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function draw() {
   background(255);
