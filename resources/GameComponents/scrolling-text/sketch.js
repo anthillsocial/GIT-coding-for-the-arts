@@ -5,7 +5,7 @@ let lineHeight = 15;   // Space between lines
 
 function preload() {
   // Loads the text file as an array of lines
-  lines = loadStrings('sketch.js');
+  lines = loadStrings('data.csv');
 }
 
 function setup() {
