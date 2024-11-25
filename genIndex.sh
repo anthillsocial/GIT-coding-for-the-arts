@@ -7,7 +7,7 @@ echo ".flex-container>div{flex: 1 0 21%;background-color:#f1f1f1;margin:10px;fon
 echo ".flex-container a{display:block;height:100%;padding:10px;padding-top:70px;text-decoration:none;}" >> $HTML
 echo ".flex-container a:hover{background-color:#818181;}" >> $HTML
 echo "</style></head><body>"  >> $HTML
-echo "<h1>p5.js code examples & resources</h1>" >> $HTML
+echo "<h1>p5.js code examples & resources<br>from <a href=\"https://github.com/anthillsocial/GIT-coding-for-the-arts\">GIT-coding-for-the-arts repository</a></h1>" >> $HTML
 echo "<div class=\"flex-container\">" >> $HTML
 for i in $(find . -name 'index.html'); do # Not recommended, will break on whitespace
     TXT=$(sed -r 's/.resources//' <<< "$i")
