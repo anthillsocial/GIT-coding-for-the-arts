@@ -4,6 +4,9 @@ Code examples and resources, based on this  short coding course
 
 Past projects can be [viewed here](https://anthillsocial.github.io/example-student-projects/public/contents.html) and are stored at this [Git repository](https://github.com/anthillsocial/example-student-projects).
 
+Example layout for the Creative Portfoliop Prompt:
+<a href="resources/CreativePortfolioExample/">here!</a>
+
 
 ## Authoriship
 Repository prepared by [Tom Keene](www.theanthillsocial.co.uk).      
