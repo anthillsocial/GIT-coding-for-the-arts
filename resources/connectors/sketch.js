@@ -22,9 +22,9 @@ function resetPostions(){
   x1s = random(0, windowWidth); 
   y1s = -40;
   // Bottom connector
-  x2 = random(0, windowWidth); 
+  x2 = x1; 
   y2 = windowHeight+10;
-  x2s =  random(0, windowWidth); 
+  x2s =  x1; 
   y2s = windowHeight;
 }
 
