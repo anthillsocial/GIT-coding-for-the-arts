@@ -50,4 +50,7 @@ function draw() {
 function mousePressed() {
   amen.stop();
   amen.play();
+  if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
 }
