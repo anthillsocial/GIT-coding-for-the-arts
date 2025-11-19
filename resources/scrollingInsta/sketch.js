@@ -1,99 +1,143 @@
-let speed = 2;   // Sets the speed of the scroll
-let frameImg, frameW, frameH, frameX;
-let Ypositions = [];
+let speed = 2;           // Scroll speed (could be set via mouse)
+let frameImg;
+let frameW, frameH, frameX;
 
-let contentArray = [];
+let yPositions = [];     // Y position of each frame
+let imageIndex = [];     // Which image (by number) each frame shows
+
 let contentImages = [
-    "cat1.png",
-    "cat2.png",
-    "ban-cat3.png",
-    "cat4.png"
+  "cat1.png",
+  "ban-cat3.png",
+  "cat2.png",
+  "cat4.png"
 ];
-let contentIndex = 0;     // Tracks which image comes next
-let whichContent = [];    // Which image belongs to each scrolling frame
 
-// Preload all the images
+let contentPics = [];    // Loaded images
+let nextIndex = 0;       // Next image number to use when a frame wraps
+
+
 function preload() {
   // Load the frame
   frameImg = loadImage("frame.png");
 
-  // Load the images
+  // Load all cat images
   for (let i = 0; i < contentImages.length; i++) {
-    contentArray[i] = loadImage("images/" + contentImages[i]);
+    contentPics[i] = loadImage("images/" + contentImages[i]);
   }
 }
 
 
 function setup() {
-  // Make the canvas full screen width
   createCanvas(windowWidth, windowHeight);
 
-  // Define the size and X position of the frame
-  frameW = frameImg.width/1.5;
-  frameH = frameImg.height/1.5;
-  windowResized(); // 
+  // Work out frame size and centre position
+  frameW = frameImg.width / 1.5;
+  frameH = frameImg.height / 1.5;
+  frameX = width / 2 - frameW / 2;
 
-  // Set initial vertical positions (3 frames filling the screen)
-  Ypositions = [0, frameH, frameH * 2];
+  // Start three frames stacked from top to bottom
+  yPositions[0] = 0;
+  yPositions[1] = frameH;
+  yPositions[2] = frameH * 2;
 
-  // Assign first 3 images
-  for (let i = 0; i < Ypositions.length; i++) {
-    whichContent[i] = contentArray[i];
-  }
+  // First three images
+  imageIndex[0] = 0;
+  imageIndex[1] = 1;
+  imageIndex[2] = 2;
 
-  // Next image to use
-  contentIndex = Ypositions.length;
+  // The next image to use when a frame reappears at the top
+  nextIndex = 3;
 }
 
 
 function draw() {
   background(100);
 
-  // Loop through the array of Y values
-  for (let i = 0; i < Ypositions.length; i++) {
+  // Loop through the array of frame postions
+  // Create an infinte loop
+  for (let i = 0; i < yPositions.length; i++) {
 
-    // Move images downward (speed could be varies by mouse)
-    Ypositions[i] += speed;
+    // Move current frame down
+    yPositions[i] = yPositions[i] + speed;
 
-    // check if a frame scrolls off-screen:
-    if (Ypositions[i] > height) {
-      let topY = Math.min(...Ypositions); // Find the top-most image
-      Ypositions[i] = topY - frameH;      // Move frame to the top
-      whichContent[i] = contentArray[contentIndex]; // Assign next image
+    // Check if the frame has got offscreen
+    updateYposition(i); 
 
-      // Update which image to display
-      contentIndex++;
-      if (contentIndex >= contentArray.length) {
-        contentIndex = 0;
-      }
-    }
+    // Set which image the frame should show
+    let idx = imageIndex[i];
 
-    // Draw image + frame
-    image(whichContent[i], frameX, Ypositions[i], 515, 590);
-    image(frameImg, frameX, Ypositions[i], frameW, frameH);
+    // Draw the image
+    image(contentPics[idx], frameX, yPositions[i], frameW, frameH);
 
-    // Check if an image is in the middle of the screen
-    inMiddle(Ypositions[i] );
+    // Draw the frame on top
+    image(frameImg, frameX, yPositions[i], frameW, frameH);
+
+    // Check if this frame is in the middle and draw name if it is
+    showNameIfMiddle(contentImages[idx], yPositions[i]);
   }
 }
 
-// Check if the image is in the middle of the screen
-function inMiddle(y){
+
+function showNameIfMiddle(imageName, y) {
+  // Centre of this frame
+  let centreY = y + frameH / 2;
+
+  // Middle band of the screen (middle third)
   let middleTop = height / 3;
   let middleBottom = 2 * height / 3;
-  // Check the *vertical center* of the frame
-  let imageCenterY = y + frameH / 2;
-  if (imageCenterY > middleTop && imageCenterY < middleBottom) {
-    // Draw a rectangle
-    fill(255,0,0);
-    rect(width/2, y+200, 100, 100);
+
+  // Check if "ban-" is inn the image filename
+  let banned = false; 
+  if (imageName.includes("ban-")) {
+    banned = true; 
+  }
+
+  // Display a red box if
+  if (centreY > middleTop && centreY < middleBottom && banned) {
+    // Initial postions of box & text
+    let boxX = width/2+130;
+    let boxY = y+150; 
+    // Red box in the middle of the screen
+    fill(255, 0, 0);
+    let boxW = 220;
+    let boxH = 40;
+    rect(boxX, boxY, boxW, boxH);
+    // Draw filename in white on top
+    fill(255);
+    textSize(30);
+    textAlign(CENTER, CENTER);
+    text(imageName, boxX+100, boxY+15);
   }
 }
 
-// Resize the canvas when the window is moved
+function updateYposition(i){
+// If it has moved off the bottom of the screen...
+    if (yPositions[i] > height) {
+
+      // 1. Find the highest (smallest) y value
+      let topY = yPositions[0];
+      for (let j = 1; j < yPositions.length; j++) {
+        if (yPositions[j] < topY) {
+          topY = yPositions[j];
+        }
+      }
+
+      // 2. Move this frame above the highest one
+      yPositions[i] = topY - frameH;
+
+      // 3. Give this frame the next image
+      imageIndex[i] = nextIndex;
+
+      // 4. Update nextIndex and wrap if needed
+      nextIndex = nextIndex + 1;
+      if (nextIndex >= contentImages.length) {
+        nextIndex = 0;
+      }
+    }
+}
+
+
 function windowResized() {
-  // Ensure the scroll keeps in the center when the
-  // window is resized
   resizeCanvas(windowWidth, windowHeight);
-  frameX = width/2 - frameW/2;
+  frameX = width / 2 - frameW / 2;
 }
