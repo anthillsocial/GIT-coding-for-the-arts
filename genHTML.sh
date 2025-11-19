@@ -1,11 +1,10 @@
 HTML=index.html 
-rm HTML
 echo "<!DOCTYPE html><html><head>" > $HTML
 echo "<style>" >> $HTML
 echo "body{font-family: Verdana, Geneva, Tahoma, sans-serif;}" >> $HTML
 echo ".flex-container{display:flex;flex-wrap:wrap;justify-content: center;}" >> $HTML
-echo ".flex-container>div{flex: 1 0 21%;background-color:#f1f1f1;margin:10px;font-size:30px;height:100px;flex-grow:1;overflow:hidden;text-align:center;}" >> $HTML
-echo ".flex-container a{display:block;height:100%;padding:10px;padding-top:70px;text-decoration:none;}" >> $HTML
+echo ".flex-container > div {flex: 1 0 21%;background-color: #f1f1f1;margin: 10px;font-size: 20px;height: 100px;flex-grow: 1;overflow: hidden;text-align: center;display: flex;}" >> $HTML
+echo ".flex-container a {flex: 1;display: flex;align-items: center;justify-content: center; text-decoration: none;padding: 0;}" >> $HTML
 echo ".flex-container a:hover{background-color:#818181;}" >> $HTML
 echo "</style></head><body>"  >> $HTML
 echo "<h1>p5.js code examples & resources</h1>" >> $HTML
