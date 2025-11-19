@@ -1,56 +1,55 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      html, body{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin:0px;
-        padding:0px;
-        background:#ededed;
-      }
-      #header, #main, #footer{
-        padding:10px;
-      }
-      #main{
-        background:#fff;
-      }
-      #header{
-        border-bottom:1px solid #ccc;
-      }
-      #footer{
-        border-top:1px solid #ccc;
-      }
-      a{
-        text-decoration:none;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="header">
-      <h1><a href="https://github.com/anthillsocial/Coding-for-the-arts">Coding-for-the-arts</a></h1>
-      <p>Code examples and resources based on the Coding For the Arts  <a href="https://github.com/anthillsocial/Coding-for-the-arts">GitHub repository</a> 
-        instructions <a href="https://anthillsocial.notion.site/anthillsocial/Coding-for-the-arts-87d747bca56c41caa78496b32ff293fd">hosted on Notion</a>
-      </p> 
-    </div> 
-    
-    <div id="main">
-        <h1>P5.js projects</h1>
-        <p>Coming soon...</p>
-    </div>
-
-    <div id="footer">
-      <p>Repository prepared by <a href="www.theanthillsocial.co.uk">Tom Keene</a>. 
-         Builds on resources shared by <a href="https://glitch.com/@ma1805/">David Young</a>.
-      </p>
-
-      <p>
-        This site is open source. <a href="https://github.com/anthillsocial/Coding-for-the-arts/edit/main/README.md">Improve this page</a>.
-      </p>
-    </div>
-    
-      
-  </body>
-</html>
+<!DOCTYPE html><html><head>
+<style>
+body{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.flex-container{display:flex;flex-wrap:wrap;justify-content: center;}
+.flex-container>div{flex: 1 0 21%;background-color:#f1f1f1;margin:10px;font-size:30px;height:100px;flex-grow:1;overflow:hidden;text-align:center;}
+.flex-container a{display:block;height:100%;padding:10px;padding-top:70px;text-decoration:none;}
+.flex-container a:hover{background-color:#818181;}
+</style></head><body>
+<h1>p5.js code examples & resources</h1>
+<p>From this <a href="https://github.com/anthillsocial/GIT-coding-for-the-arts">GIT-coding-for-the-arts repository</a></p>
+<div class="flex-container">
+<div><a href="./02-drawing/albers/index.html">02-drawing<br>albers</a></div>
+<div><a href="./02-drawing/almost-every-shape/index.html">02-drawing<br>almost-every-shape</a></div>
+<div><a href="./02-drawing/boxes/index.html">02-drawing<br>boxes</a></div>
+<div><a href="./02-drawing/ellipse-spectrum/index.html">02-drawing<br>ellipse-spectrum</a></div>
+<div><a href="./02-drawing/translations/index.html">02-drawing<br>translations</a></div>
+<div><a href="./03-variables/likes/index.html">03-variables<br>likes</a></div>
+<div><a href="./03-variables/loop-grid/index.html">03-variables<br>loop-grid</a></div>
+<div><a href="./03-variables/pencil-lines/index.html">03-variables<br>pencil-lines</a></div>
+<div><a href="./03-variables/string-manipulation/index.html">03-variables<br>string-manipulation</a></div>
+<div><a href="./03-variables/uk-gov/index.html">03-variables<br>uk-gov</a></div>
+<div><a href="./04-loops-conditionals-mouse/auto-grid/index.html">04-loops-conditionals-mouse<br>auto-grid</a></div>
+<div><a href="./04-loops-conditionals-mouse/falling/index.html">04-loops-conditionals-mouse<br>falling</a></div>
+<div><a href="./04-loops-conditionals-mouse/simple-mouse/index.html">04-loops-conditionals-mouse<br>simple-mouse</a></div>
+<div><a href="./05-ifelse-collission/auto-bounce/index.html">05-ifelse-collission<br>auto-bounce</a></div>
+<div><a href="./05-ifelse-collission/auto-x-movement/index.html">05-ifelse-collission<br>auto-x-movement</a></div>
+<div><a href="./05-ifelse-collission/circle-click/index.html">05-ifelse-collission<br>circle-click</a></div>
+<div><a href="./05-ifelse-collission/collission-circle/index.html">05-ifelse-collission<br>collission-circle</a></div>
+<div><a href="./05-ifelse-collission/collission-square/index.html">05-ifelse-collission<br>collission-square</a></div>
+<div><a href="./06-media/face-like/index.html">06-media<br>face-like</a></div>
+<div><a href="./06-media/image-mash/index.html">06-media<br>image-mash</a></div>
+<div><a href="./06-media/pixelate-color/index.html">06-media<br>pixelate-color</a></div>
+<div><a href="./06-media/pixelate-grey/index.html">06-media<br>pixelate-grey</a></div>
+<div><a href="./06-media/sound-pan-speed/index.html">06-media<br>sound-pan-speed</a></div>
+<div><a href="./06-media/video-control/index.html">06-media<br>video-control</a></div>
+<div><a href="./07-rotate-array-assignment/block-array/index.html">07-rotate-array-assignment<br>block-array</a></div>
+<div><a href="./07-rotate-array-assignment/rotate/index.html">07-rotate-array-assignment<br>rotate</a></div>
+<div><a href="./resources/click-and-drag/index.html">click-and-drag</a></div>
+<div><a href="./resources/falling-dots/index.html">falling-dots</a></div>
+<div><a href="./resources/jumping/index.html">jumping</a></div>
+<div><a href="./resources/random-appearing-blocks-timer/index.html">random-appearing-blocks-timer</a></div>
+<div><a href="./resources/random-scrolling-baddies/index.html">random-scrolling-baddies</a></div>
+<div><a href="./resources/road/index.html">road</a></div>
+<div><a href="./resources/scrolling-text/index.html">scrolling-text</a></div>
+<div><a href="./resources/CreativePortfolioExample/01-drawing/index.html">CreativePortfolioExample<br>01-drawing</a></div>
+<div><a href="./resources/CreativePortfolioExample/02-movement/index.html">CreativePortfolioExample<br>02-movement</a></div>
+<div><a href="./resources/CreativePortfolioExample/03-multiples/index.html">CreativePortfolioExample<br>03-multiples</a></div>
+<div><a href="./resources/CreativePortfolioExample/04-collisions/index.html">CreativePortfolioExample<br>04-collisions</a></div>
+<div><a href="./resources/CreativePortfolioExample/05-media/index.html">CreativePortfolioExample<br>05-media</a></div>
+<div><a href="./resources/CreativePortfolioExample/index.html">CreativePortfolioExample</a></div>
+<div><a href="./resources/GameStructure/index.html">GameStructure</a></div>
+<div><a href="./resources/connectors/index.html">connectors</a></div>
+<div><a href="./resources/scrollingInsta/index.html">scrollingInsta</a></div>
+<div><a href="./index.html">index.html</a></div>
+</div></body></html>
