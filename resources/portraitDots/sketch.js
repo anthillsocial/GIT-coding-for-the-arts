@@ -2,15 +2,16 @@
 // Portrait from coordinates
 // =============================
 let portraitCoords = [
-  { x: 120, y: 80 },
-  { x: 130, y: 82 },
-  { x: 140, y: 85 },
-  { x: 150, y: 90 },
-  { x: 160, y: 95 },
-  { x: 170, y: 100 },
-  { x: 180, y: 105 },
-  { x: 190, y: 110 },
-  { x: 200, y: 115 },
+  { x: 150, y: 120 }, // eye
+  { x: 280, y: 120 }, // eye
+  { x: 130, y: 20 },
+  { x: 140, y: 20 },
+  { x: 150, y: 20 },
+  { x: 160, y: 20 },
+  { x: 170, y: 20 },
+  { x: 180, y: 20 },
+  { x: 190, y: 20 },
+  { x: 200, y: 20 },
   // ... add as many as you need
 ];
 
@@ -24,7 +25,7 @@ function preload() {
 
 function setup() {
   // Adjust canvas size to fit your portrait
-  createCanvas(400, 400);
+  createCanvas(500, 600);
   background(255);
   noLoop(); // we only need to draw once
 }
