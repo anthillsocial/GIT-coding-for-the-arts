@@ -1,0 +1,17 @@
+html, body {
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
+canvas {
+  display: block;
+}
+body {
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+}
+
+#wrap {
+  text-align: center;
+}
